@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-</head>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="stilus.css">
 	<script src="kod.js"></script>
+</head>
 <body>
 	<div ID="kinalat">
 		<table>
 			<tr>
 				<th>Termék megnevezése</th>
 				<th>Termék képe</th>
+				<th>Mennyiség</th>
+                <th>Részösszeg</th>
 			</tr>
 			<tr>
-                <td id="termek1" class="termekek" onclick="kivalaszt('termek1')">Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3K4/16</td>
+                <td>Kingston HyperX Predator 16GB RAM</td>
                 <td><img src="RAM.jpg" class="kiskep" alt="" onmouseover="nagyitKep('RAM.jpg')" onmouseout="visszaKep()"></td>
+				<td><input type="number" id="db1" value="0" min="0" oninput="szamol()"></td>
+                <td id="resz1">0 Ft</td>
             </tr>
             <tr>
-                <td id="termek2" class="termekek" onclick="kivalaszt('termek2')">LG 27MP59G-P Monitor</td>
+            	<td>LG 27MP59G-P Monitor</td>
                 <td><img src="monitor.jpg" class="kiskep" alt="" onmouseover="nagyitKep('monitor.jpg')" onmouseout="visszaKep()"></td>
+				<td><input type="number" id="db2" value="0" min="0" oninput="szamol()"></td>
+                <td id="resz2">0 Ft</td>
             </tr>
             <tr>
-                <td id="termek3" class="termekek" onclick="kivalaszt('termek3')">Western Digital Red 3.5" 2TB 5400rpm 64MB SATA3 WD20EFRX</td>
+                <td>Western Digital Red 2TB HDD</td>
                 <td><img src="HDD.jpg" class="kiskep" alt="" onmouseover="nagyitKep('HDD.jpg')" onmouseout="visszaKep()"></td>
+				<td><input type="number" id="db3" value="0" min="0" oninput="szamol()"></td>
+                <td id="resz3">0 Ft</td>
             </tr>
             <tr>
-                <td id="termek4" class="termekek" onclick="kivalaszt('termek4')">Samsung 970 EVO 500GB M.2 PCIe MZ-V7E500BW</td>
+                <td>Samsung 970 EVO 500GB SSD</td>
                 <td><img src="SSD.jpg" class="kiskep" alt="" onmouseover="nagyitKep('SSD.jpg')" onmouseout="visszaKep()"></td>
+				<td><input type="number" id="db4" value="0" min="0" oninput="szamol()"></td>
+                <td id="resz4">0 Ft</td>
             </tr>
             <tr>
-                <td id="termek5" class="termekek" onclick="kivalaszt('termek5')">Chieftec Smart 500W (GPS-500A8)</td>
+                <td>Chieftec Smart 500W táp</td>
                 <td><img src="tap.jpg" class="kiskep" alt="" onmouseover="nagyitKep('tap.jpg')" onmouseout="visszaKep()"></td>
+				<td><input type="number" id="db5" value="0" min="0" oninput="szamol()"></td>
+                <td id="resz5">0 Ft</td>
             </tr>
 		</table>	
 	</div>
@@ -40,6 +53,7 @@
 
 	<div ID="kosar">
 		<h2>Kosár tartalma:</h2>
+		<p id="osszertek">0 Ft</p>
 	</div>	
 </body>
 </html>
